@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       name: 'React'
     };
+    console.log('Router', require('react-router-dom'));
   }
 
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/list">List</Link></li>
+            <li><Link to="/list/1">List 1</Link></li>
           </ul>
 
           <Switch>
@@ -37,6 +39,9 @@ class App extends Component {
             </Route>
             <Route path="/about">
               <p>About page</p>
+            </Route>
+            <Route path="/list/:id">
+              <p>List 1</p>
             </Route>
             <Route path="/list">
               <p>List page</p>
